@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Patrick Klingemann"]
   s.date = %q{2010-10-22}
-  s.description = %q{TODO: longer description of your gem}
-  s.email = %q{klingema@musc.edu}
+  s.description = %q{A Rails plugin that facilitates the creation of toggleable, chainable filter links in collection views, based on defined scopes.}
+  s.email = %q{patrick.klingemann@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "app/views/scope_filters/_scope_filters.html.haml",
      "lib/scope_filters.rb",
      "lib/scope_filters/extensions.rb",
+     "scope_filters.gemspec",
      "test/helper.rb",
      "test/test_scope_filters.rb"
   ]
@@ -33,7 +34,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{Chainable, Toggleable Resource Filters for ActiveRecord Models}
   s.test_files = [
     "test/test_scope_filters.rb",
      "test/helper.rb"
