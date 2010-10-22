@@ -1,0 +1,10 @@
+<ul class="filter-links">
+  <% model_class.scopes.keys.each do |scope| %>
+    <% scope_name = scope.to_s %>
+    <% if applied_scopes.include?(scope_name) %>
+      <li class="scope-applied"><%= link_to(scope_name.titleize, remove_scope_path(scope_name, additional_params)) %></li>
+    <% else %>
+      <li><%= link_to(scope_name.titleize, apply_scope_path(scope_name, additional_params)) %></li>
+    <% end %>
+  <% end %>
+</ul>
