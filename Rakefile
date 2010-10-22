@@ -5,9 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "scope_filters"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "klingema@musc.edu"
+    gem.summary = %Q{Chainable, Toggleable Resource Filters for ActiveRecord Models}
+    gem.description = %Q{A Rails plugin that facilitates the creation of toggleable, chainable filter links in collection views, based on defined scopes.}
+    gem.email = "patrick.klingemann@gmail.com"
     gem.homepage = "http://github.com/pklingem/scope_filters"
     gem.authors = ["Patrick Klingemann"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
