@@ -27,9 +27,29 @@ module ScopeFilters
         else
           raise ArgumentError, "incorrect model object"
         end
-        render 'scope_filters/filter_links', :model_class => model_name.constantize, :additional_params => additional_params
+#       render 'scope_filters/filter_links', :model_class => model_name.constantize, :additional_params => additional_params
+        filter_links_markup(model_name.constantize, additional_params)
       end
       
+      def filter_links_markup(model_class, additional_params)
+        content_tag(:ul, :class => 'filter-links') do
+          model_class.scopes.keys.collect do |scope|
+            filter_link(scope.to_s, additional_params)
+          end.join('')
+        end
+      end
+
+      def filter_link(scope_name, additional_params)
+        if applied_scopes.include?(scope_name)
+          content_tag(:li, :class => 'scope-applied') do
+            link_to(scope_name.titleize, remove_scope_path(scope_name, additional_params))
+          end
+        else
+          content_tag(:li) do
+            link_to(scope_name.titleize, apply_scope_path(scope_name, additional_params))
+          end
+        end
+      end
       def applied_scopes_hash
         params[:scopes].nil? ? {} : params[:scopes].reject {|key, value| false}
       end
