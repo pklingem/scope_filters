@@ -1,6 +1,6 @@
 = scope_filters
 
-Description goes here.
+A simple Rails plugin the takes creates generates filter links for a model/resource in a view.
 
 == Note on Patches/Pull Requests
  
@@ -11,6 +11,17 @@ Description goes here.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
+
+== How to use
+
+1. add 'gem 'scope_filters' to your Gemfile
+2. in an erb view do:
+
+<%= filter_links('ModelName') %>
+
+optionally, you may include additional HTTP parameters which should be included in the generated urls by passing a hash as the second argument, like so:
+
+<%= filter_links('ModelName', { :search_term => 'guyute' }) %>
 
 == Copyright
 
