@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{scope_filters}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Patrick Klingemann"]
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "app/views/scope_filters/_scope_filters.html.haml",
+     "app/views/scope_filters/_filter_links.html.erb",
      "lib/scope_filters.rb",
      "lib/scope_filters/extensions.rb",
      "scope_filters.gemspec",
